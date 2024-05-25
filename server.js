@@ -11,13 +11,13 @@ app.post('/users', (req, res) => {
     
     users.push(req.body)
 
-    res.send('ok post, deu certo!')
+    res.status(201).json(req.body)
 
 })
 
 
 app.get('/users', (req, res) => {
-    res.json(users)
+    res.status(200).json(users)
 })
 
 
